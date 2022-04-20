@@ -11,3 +11,8 @@ Here are some notes though:
 
 * I will not be supporting websites that offer NSFW images on their main page
 * At some point, I may consider custom rules, like Mouseover Popup Image Viewer has
+
+
+```JavaScript
+const supported_websites = ['pixiv.net', 'flickr.com'];
+```
