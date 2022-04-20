@@ -11,7 +11,7 @@ Here are some notes though:
 
 * I will not be supporting websites that offer NSFW images on their main page
 * At some point, I may consider custom rules, like Mouseover Popup Image Viewer has
-* Tested on Violentmonkey, with Edge browser
+* Tested on Violentmonkey only, with Edge browser
 
 
 ```JavaScript
