@@ -1,4 +1,4 @@
-# Pretending-Tab-Images-Viewer
+## Pretending-Tab-Images-Viewer
 Open the full size image when you click the link of that image's page in tab like view. Click toggles the view, right click closes it
 
 Its basic idea is to mimic opening the full size image when you click the link of that image's page, that is supported by this script.
@@ -17,3 +17,9 @@ Here are some notes though:
 ```JavaScript
 const supported_websites = ['pixiv.net', 'flickr.com'];
 ```
+
+## Similar User Scripts
+that offer more features, as this User Script aims to be more simple
+* [Mouseover Popup Image Viewer](https://github.com/tophf/mpiv)
+* [Picviewer CE+](https://github.com/hoothin/UserScripts/tree/master/Picviewer%20CE%2B)
+* [HandyImage](https://github.com/Owyn/HandyImage)
