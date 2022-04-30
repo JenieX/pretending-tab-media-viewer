@@ -1,5 +1,14 @@
-## Pretending-Tab-Images-Viewer
-Open the full size image when you click the link of that image's page in tab like view. Click toggles the view, right click closes it
+## Pretending Tab - Images Viewer (This info for next update, soon)
+A simple User Script that Opens the full size image in tab like view. Offering three view states. Fitting, filling, original, to the view.
+
+
+Action | Trigger
+---|---
+**Activate** | left click, on links or hyperlinked images of supported websites
+**Deactivate** | right click
+**Toggle view** | middle click, left click
+**Force context menu** | long right click, right click + shift
+
 
 Its basic idea is to mimic opening the full size image when you click the link of that image's page, that is supported by this script.
 
