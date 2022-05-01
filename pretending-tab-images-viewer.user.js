@@ -10,11 +10,12 @@
 // @grant          GM_setClipboard
 // @grant          GM.setClipboard
 // @noframes
-// @run-at         document-start 
+// @run-at         document-start
 // @compatible     edge Tampermonkey or Violentmonkey
 // @compatible     firefox Greasemonkey, Tampermonkey or Violentmonkey
 // @compatible     chrome Tampermonkey or Violentmonkey
 // @compatible     opera Tampermonkey or Violentmonkey
+// @supportURL     https://github.com/FlowerForWar/Pretending-Tab-Images-Viewer/issues
 // @license        MIT
 // ==/UserScript==
 
