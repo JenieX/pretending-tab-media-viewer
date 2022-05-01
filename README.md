@@ -17,7 +17,7 @@ Gesture | Action
 * Gestures part of the code is by [Peer Zeng](https://greasyfork.org/en/scripts/4776-my-mouse-gestures)
 
 ## Showcases
-### [Pixiv](https://streamable.com/9pj87x), [Reddit](https://www.reddit.com/r/ForzaHorizon/new/)
+### [Pixiv](https://streamable.com/9pj87x)
 
 ## Supported Websites
 ### pixiv.net, flickr.com, imdb.com, reddit.com, riotpixels.com
