@@ -10,6 +10,7 @@
 // @grant          GM_setClipboard
 // @grant          GM.setClipboard
 // @noframes
+// @run-at         document-start 
 // @compatible     edge Tampermonkey or Violentmonkey
 // @compatible     firefox Greasemonkey, Tampermonkey or Violentmonkey
 // @compatible     chrome Tampermonkey or Violentmonkey
