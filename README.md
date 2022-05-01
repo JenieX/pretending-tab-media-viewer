@@ -14,7 +14,7 @@ Gesture | Action
 **↓** | Scroll to the bottom of the image
 **←→** | Open the image in a new tab
 **→←** | Copy the image address
-**→↓** | Download image
+**→↓** | Download the image
 * Gestures part of the code is by [Peer Zeng](https://greasyfork.org/en/scripts/4776-my-mouse-gestures)
 
 ## Showcases
