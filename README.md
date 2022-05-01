@@ -30,7 +30,7 @@ Website | Case
 
 ## Notes
 * NSFW specific websites will not be supported, excluding general image hosting websites
-* Tested in Violentmonkey with Edge browser
+* Supports Violentmonkey, Tampermonkey, and Greasemonkey
 
 ---
 
