@@ -36,9 +36,9 @@ Website | Case
 
 ## Similar User Scripts
 that offer more features, as this User Script aims to be very simple
-* [Mouseover Popup Image Viewer](https://github.com/tophf/mpiv)
-* [Picviewer CE+](https://github.com/hoothin/UserScripts/tree/master/Picviewer%20CE%2B)
-* [HandyImage](https://github.com/Owyn/HandyImage)
+* Mouseover Popup Image Viewer
+* Picviewer CE
+* HandyImage
 
 ## Works alongside these User Scripts
 * [Select text inside a link like Opera](https://github.com/eight04/select-text-inside-a-link-like-opera)
