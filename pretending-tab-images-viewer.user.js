@@ -1,13 +1,20 @@
 // ==UserScript==
 // @name           Pretending Tab - Images Viewer
-// @namespace      PretendingTab
+// @namespace      https://github.com/FlowerForWar/Pretending-Tab-Images-Viewer
 // @description    Opens the full size image in tab like view. Offering three view states. Fitting, filling, original.
-// @version        0.07
+// @version        0.10
 // @author         FlowrForWar
 // @include        *
 // @grant          GM_xmlhttpRequest
+// @grant          GM.xmlHttpRequest
 // @grant          GM_setClipboard
+// @grant          GM.setClipboard
 // @noframes
+// @compatible     chrome Violentmonkey
+// @compatible     chrome Tampermonkey
+// @compatible     firefox Greasemonkey
+// @compatible     firefox Violentmonkey
+// @compatible     firefox Tampermonkey
 // @license        MIT
 // ==/UserScript==
 
@@ -247,7 +254,7 @@ const gestures = {
 		window.open(image.src);
 	},
 	RL: function() {
-		GM_setClipboard(image.src);
+		(typeof GM === 'undefined' ? GM_setClipboard : GM.setClipboard)(image.src);
 	},
 	// RD: function() {},
 };
@@ -372,6 +379,6 @@ function get_website(href) {
 
 function async_request(url) {
 	return new Promise(resolve => {
-		GM_xmlhttpRequest({ method: 'GET', url, onload: response => resolve(response) });
+		(typeof GM === 'undefined' ? GM_xmlhttpRequest : GM.xmlHttpRequest)({ method: 'GET', url, onload: response => resolve(response) });
 	});
 }
