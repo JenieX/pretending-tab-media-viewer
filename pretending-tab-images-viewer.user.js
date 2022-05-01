@@ -10,11 +10,10 @@
 // @grant          GM_setClipboard
 // @grant          GM.setClipboard
 // @noframes
-// @compatible     chrome Violentmonkey
-// @compatible     chrome Tampermonkey
-// @compatible     firefox Greasemonkey
-// @compatible     firefox Violentmonkey
-// @compatible     firefox Tampermonkey
+// @compatible     edge Tampermonkey or Violentmonkey
+// @compatible     firefox Greasemonkey, Tampermonkey or Violentmonkey
+// @compatible     chrome Tampermonkey or Violentmonkey
+// @compatible     opera Tampermonkey or Violentmonkey
 // @license        MIT
 // ==/UserScript==
 
