@@ -32,10 +32,6 @@ Website | Case
 * NSFW specific websites will not be supported, excluding general image hosting websites
 * Tested on Violentmonkey, plus Edge browser
 
-## Request Websites Support
-* [GitHub](https://github.com/FlowerForWar/Pretending-Tab-Images-Viewer/issues)
-* [Greasy Fork](https://greasyfork.org/en/scripts/443656-pretending-tab-images-viewer/feedback)
-
 ---
 
 ## Similar User Scripts
