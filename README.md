@@ -16,8 +16,8 @@ Gesture | Action
 **→←** | Copy the image address
 * Gestures part of the code is by [Peer Zeng](https://greasyfork.org/en/scripts/4776-my-mouse-gestures)
 
-## Showcase
-### [Pixiv](https://streamable.com/9pj87x)
+## Showcases
+### [Pixiv](https://streamable.com/9pj87x), [Reddit](https://streamable.com/7z251d)
 
 ## Supported Websites
 ### pixiv.net, flickr.com, imdb.com, reddit.com, riotpixels.com
@@ -41,5 +41,5 @@ that offer more features, as this User Script aims to be very simple
 * [HandyImage](https://github.com/Owyn/HandyImage)
 
 ## Works alongside these User Scripts
-* [Select text inside a link like Opera](https://greasyfork.org/en/scripts/789-select-text-inside-a-link-like-opera)
-
+* [Select text inside a link like Opera](https://github.com/eight04/select-text-inside-a-link-like-opera)
+* [Open links in current tab](https://greasyfork.org/en/scripts/4416-open-links-in-current-tab)
