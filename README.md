@@ -1,4 +1,4 @@
-## Pretending Tab - Images Viewer (This info for next update, soon)
+## Pretending Tab - Images Viewer
 A simple User Script that opens the full size image in tab like view. Offering three view states. Fitting, filling, original.
 
 Action | Trigger
