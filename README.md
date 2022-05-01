@@ -17,10 +17,7 @@ Gesture | Action
 * Gestures part of the code is by [Peer Zeng](https://greasyfork.org/en/scripts/4776-my-mouse-gestures)
 
 ## Showcases
-* [Pixiv](https://streamable.com/9pj87x)
-* [Reddit](https://www.reddit.com/r/ForzaHorizon/new/)
-
-Since it's just me using the script, obviously not many links are supported, but if someone is interested in the script, I can add support for few more websites
+### [Pixiv](https://streamable.com/9pj87x), [Reddit](https://www.reddit.com/r/ForzaHorizon/new/)
 
 ## Supported Websites
 ### pixiv.net, flickr.com, imdb.com, reddit.com, riotpixels.com
@@ -34,6 +31,12 @@ Website | Case
 ## Notes
 * NSFW specific websites will not be supported, excluding general image hosting websites
 * Tested on Violentmonkey, plus Edge browser
+
+## Request Websites Support
+* [GitHub](https://github.com/FlowerForWar/Pretending-Tab-Images-Viewer/issues)
+* [Greasy Fork](https://greasyfork.org/en/scripts/443656-pretending-tab-images-viewer/feedback)
+
+---
 
 ## Similar User Scripts
 that offer more features, as this User Script aims to be very simple
