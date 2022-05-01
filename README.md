@@ -16,7 +16,7 @@ Gesture | Action
 **→←** | Copy the image address
 * Gestures part of the code is by [Peer Zeng](https://greasyfork.org/en/scripts/4776-my-mouse-gestures)
 
-## Showcases
+## Showcase
 ### [Pixiv](https://streamable.com/9pj87x)
 
 ## Supported Websites
