@@ -2,7 +2,7 @@
 // @name           Pretending Tab - Images Viewer
 // @namespace      https://github.com/FlowerForWar/Pretending-Tab-Images-Viewer
 // @description    Opens the full size image in tab like view. Offering three view states. Fitting, filling, original.
-// @version        0.10
+// @version        0.11
 // @author         FlowrForWar
 // @include        *
 // @grant          GM_xmlhttpRequest
@@ -19,6 +19,7 @@
 // @license        MIT
 // ==/UserScript==
 
+const Greasemonkey = typeof GM !== 'undefined';
 const supported_websites = ['pixiv.net', 'flickr.com', 'imdb.com', 'reddit.com', 'redd.it', 'riotpixels.com'];
 let parentDiv, div, image, zoomDiv, span, scrollPosition, imageWidth, imageHeight, directLink, state, responseText, match, temp1, temp2, start, end, timeOut;
 
@@ -255,9 +256,11 @@ const gestures = {
 		window.open(image.src);
 	},
 	RL: function() {
-		(typeof GM === 'undefined' ? GM_setClipboard : GM.setClipboard)(image.src);
+		(Greasemonkey ? GM.setClipboard : GM_setClipboard)(image.src);
 	},
-	// RD: function() {},
+	RD: function() {
+		download({ url: image.src, name: get_file_name(image.src) });
+	},
 };
 
 const SENSITIVITY = 3; // 1 ~ 5
@@ -378,8 +381,42 @@ function get_website(href) {
 	}
 }
 
-function async_request(url) {
+function get_file_name(src) {
+	return src
+		.split('/')
+		.pop()
+		.split('#')[0]
+		.split('?')[0];
+}
+
+const headers = {
+	'pximg.net': {
+		Referer: 'https://www.pixiv.net/',
+	},
+};
+
+function get_headers(url) {
+	return headers[get_website(url)];
+}
+
+function save(blob, name) {
+	const link = document.createElement('a');
+	link.href = blob;
+	link.download = name;
+	link.dispatchEvent(new MouseEvent('click'));
+	window.setTimeout(() => window.URL.revokeObjectURL(blob), 1000);
+}
+
+async function download({ url, name }) {
+	const { status, response } = await async_request({ url, responseType: 'blob', headers: get_headers(url) });
+	if (status !== 200) return void alert(`Error loading: ${url}`);
+	save(window.URL.createObjectURL(response), name);
+}
+
+function async_request(options_) {
+	const options = typeof options_ === 'string' ? { url: options_ } : options_;
+	const { method = 'GET', url, data, headers, withCredentials = !1, responseType = '', onprogress } = options;
 	return new Promise(resolve => {
-		(typeof GM === 'undefined' ? GM_xmlhttpRequest : GM.xmlHttpRequest)({ method: 'GET', url, onload: response => resolve(response) });
+		(Greasemonkey ? GM.xmlHttpRequest : GM_xmlhttpRequest)({ method, url, data, headers, anonymous: !withCredentials, responseType, onprogress, onload: response => resolve(response) });
 	});
 }
