@@ -20,8 +20,7 @@ Website | Example Match
 **flickr.com** | https://www.flickr.com/photos/lordv/52035333919
 **imdb.com** | https://www.imdb.com/title/tt0266543/mediaviewer/rm313765888<br>https://www.imdb.com/name/nm0002064/mediaviewer/rm3059495936/
 **reddit.com** | https://preview.redd.it/3xrm8oun56s81.png?width=640&crop=smart&auto=webp&s=8618284177c0d5c23c5ec7b2f35fcfe536c40528
-**redd.it** | long right click, right click + shift
-**riotpixels.com** | long right click, right click + shift
+**riotpixels.com** | https://ru.riotpixels.com/games/12-minutes/screenshots/1/
 
 ## Notes
 * I will not support websites that offer NSFW images on their main page
