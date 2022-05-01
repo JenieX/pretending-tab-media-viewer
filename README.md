@@ -1,33 +1,42 @@
 ## Pretending Tab - Images Viewer (This info for next update, soon)
-A simple User Script that Opens the full size image in tab like view. Offering three view states. Fitting, filling, original, to the view.
+A simple User Script that Opens the full size image in tab like view. Offering three view states. Fitting, filling, original.
 
 Action | Trigger
 ---|---
 **Activate** | left click, on links or hyperlinked images
 **Deactivate** | right click
 **Toggle view** | middle click, left click
-**Force context menu** | long right click, right click + shift
+**Force open context menu** | long right click, right click + shift
 
+Gesture | Action
+---|---
+**↑** | Scroll to the top of the image
+**↓** | Scroll to the bottom of the image
+**←→** | Open the image in a new tab
+**→←** | Copy the image address
+* Gestures part of the code is by [Peer Zeng](https://greasyfork.org/en/scripts/4776-my-mouse-gestures)
 
-[Video](https://streamable.com/9pj87x) that illustrates that.
+## Showcases
+* [Pixiv](https://streamable.com/9pj87x)
+* [Reddit](https://www.reddit.com/r/ForzaHorizon/new/)
 
 Since it's just me using the script, obviously not many links are supported, but if someone is interested in the script, I can add support for few more websites
 
 ## Supported Websites
-Website | Example Match
+### pixiv.net, flickr.com, imdb.com, reddit.com, riotpixels.com
+
+Website | Case
 ---|---
-**pixiv.net** | https://www.pixiv.net/en/artworks/38051128
-**flickr.com** | https://www.flickr.com/photos/lordv/52035333919
-**imdb.com** | https://www.imdb.com/title/tt0266543/mediaviewer/rm313765888<br>https://www.imdb.com/name/nm0002064/mediaviewer/rm3059495936/
-**reddit.com** | https://preview.redd.it/3xrm8oun56s81.png?width=640&crop=smart&auto=webp&s=8618284177c0d5c23c5ec7b2f35fcfe536c40528
-**riotpixels.com** | https://ru.riotpixels.com/games/12-minutes/screenshots/1/
+**imdb.com** | thumbnails, on pages like https://www.imdb.com/title/tt0266543/mediaindex
+**reddit.com** | images matching https://preview.redd.it/*
+
 
 ## Notes
-* I will not support websites that offer NSFW images on their main page
+* NSFW specific websites will not be supported, excluding general image hosting websites
 * Tested on Violentmonkey, plus Edge browser
 
 ## Similar User Scripts
-that offer more features, as this User Script aims to be more simple
+that offer more features, as this User Script aims to be very simple
 * [Mouseover Popup Image Viewer](https://github.com/tophf/mpiv)
 * [Picviewer CE+](https://github.com/hoothin/UserScripts/tree/master/Picviewer%20CE%2B)
 * [HandyImage](https://github.com/Owyn/HandyImage)
