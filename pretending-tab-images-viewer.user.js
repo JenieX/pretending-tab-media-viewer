@@ -2,7 +2,7 @@
 // @name           Pretending Tab - Images Viewer
 // @namespace      https://github.com/FlowerForWar/Pretending-Tab-Images-Viewer
 // @description    Opens the full size image in tab like view. Offering three view states. Fitting, filling, original.
-// @version        0.11
+// @version        0.12
 // @author         FlowrForWar
 // @include        *
 // @grant          GM_xmlhttpRequest
@@ -53,7 +53,7 @@ async function get_image(target, closestAElement, href, childImgElement) {
 		// imdb.com
 		case /https:\/\/www\.imdb\.com\/(name|title)\/[^/]+\/mediaviewer\//.test(href):
 			toggle_tab(!0);
-			temp1 = (childImgElement || target.closest('.ipc-photo').querySelector('img')).src;
+			temp1 = (childImgElement || target.closest('.ipc-poster, .ipc-photo').querySelector('img')).src;
 			directLink = temp1.replace(/\._V1.+/, '');
 			break;
 		// -----------------------------------------------------------------------
