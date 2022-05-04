@@ -20,10 +20,33 @@
 // ==/UserScript==
 
 const Greasemonkey = typeof GM !== 'undefined';
-const supported_websites = ['pixiv.net', 'flickr.com', 'imdb.com', 'reddit.com', 'redd.it', 'riotpixels.com'];
-let parentDiv, div, image, zoomDiv, span, scrollPosition, imageWidth, imageHeight, directLink, state, responseText, match, temp1, temp2, start, end, timeOut;
+const supported_websites = [
+	//
+	'pixiv.net',
+	'flickr.com',
+	'imdb.com',
+	'reddit.com',
+	'redd.it',
+	'riotpixels.com',
+];
+// prettier-ignore
+let parentDiv, div, image, zoomDiv, span, scrollPosition, closestAElement, childImgElement, imageWidth, imageHeight, directLink, state, responseText, match, temp1, temp2, start, end, timeOut, interval;
 
-async function get_image(target, closestAElement, href, childImgElement) {
+function has_a_thumbnail(substr_or_regexp, replacement, call_toggle_tab = !0) {
+	if (childImgElement && (typeof substr_or_regexp === 'string' ? childImgElement.src.includes(substr_or_regexp) : regexp.test(childImgElement.src))) {
+		if (call_toggle_tab) toggle_tab(!0);
+		directLink = childImgElement.src.replace(substr_or_regexp, replacement);
+	}
+}
+
+async function remote_response_text_match(href, regexp, call_toggle_tab = !0) {
+	if (call_toggle_tab) toggle_tab(!0);
+	responseText = (await async_request(href)).responseText;
+	match = responseText.match(regexp);
+	if (match) directLink = match[1];
+}
+
+async function get_image(href) {
 	switch (!0) {
 		// -----------------------------------------------------------------------
 		// pixiv.net
@@ -53,7 +76,7 @@ async function get_image(target, closestAElement, href, childImgElement) {
 		// imdb.com
 		case /https:\/\/www\.imdb\.com\/(name|title)\/[^/]+\/mediaviewer\//.test(href):
 			toggle_tab(!0);
-			temp1 = (childImgElement || target.closest('.ipc-poster, .ipc-photo').querySelector('img')).src;
+			temp1 = (childImgElement || this.closest('.ipc-poster, .ipc-photo').querySelector('img')).src;
 			directLink = temp1.replace(/\._V1.+/, '');
 			break;
 		// -----------------------------------------------------------------------
@@ -88,11 +111,11 @@ async function get_image(target, closestAElement, href, childImgElement) {
 	image.style.setProperty('display', 'none');
 
 	// Seems to be the fastest way to get image.naturalWidth and image.naturalHeight
-	const hack_1 = setInterval(() => {
+	interval = setInterval(() => {
 		if (image.naturalWidth) {
 			imageWidth = Math.round(image.naturalWidth / window.devicePixelRatio);
 			imageHeight = Math.round(image.naturalHeight / window.devicePixelRatio);
-			clearInterval(hack_1);
+			clearInterval(interval);
 			image.style.removeProperty('display');
 			if ((imageWidth < innerWidth && imageHeight < innerHeight) || (imageWidth < innerWidth && imageHeight / imageWidth > 3.5)) original_view();
 			else fit_view();
@@ -117,8 +140,9 @@ function toggle_tab(show = !1) {
 		image.removeAttribute('style');
 		window.removeEventListener('contextmenu', contextmenu);
 		clearTimeout(timeOut);
+		clearInterval(interval);
 		span.innerHTML = '';
-		scrollPosition = imageWidth = imageHeight = directLink = state = responseText = match = temp1 = temp2 = start = end = timeOut = null;
+		scrollPosition = closestAElement = childImgElement = imageWidth = imageHeight = directLink = state = responseText = match = temp1 = temp2 = start = end = timeOut = interval = null;
 	}
 }
 
@@ -305,7 +329,6 @@ function click(event) {
 	end = performance.now();
 	const { target } = event;
 
-	let closestAElement;
 	if (target.closest('a')) closestAElement = target.closest('a');
 	else if (target.tagName === 'IMG' && target.src && target.src.startsWith('http')) {
 		closestAElement = document.createElement('a');
@@ -335,8 +358,8 @@ function click(event) {
 	event.stopPropagation();
 	event.stopImmediatePropagation();
 
-	const childImgElement = closestAElement.querySelector('img');
-	get_image(target, closestAElement, href, childImgElement);
+	childImgElement = closestAElement.querySelector('img');
+	get_image.call(target, href);
 }
 
 function contextmenu(event) {
