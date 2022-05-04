@@ -2,7 +2,7 @@
 // @name           Pretending Tab - Images Viewer
 // @namespace      https://github.com/FlowerForWar/Pretending-Tab-Images-Viewer
 // @description    Opens the full size image in tab like view. Offering three view states. Fitting, filling, original.
-// @version        0.13
+// @version        0.14
 // @author         FlowrForWar
 // @include        *
 // @grant          GM_xmlhttpRequest
