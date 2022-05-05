@@ -2,7 +2,7 @@
 A simple User Script that opens the full size image in tab like view. Offering three view states. Fitting, filling, original.
 
 ### Important Note
-This user script will break click listeners on hyperlinked elements.
+This user script will break click listener on hyperlinked elements.
 
 Action | Trigger
 ---|---
