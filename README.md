@@ -1,7 +1,7 @@
 ## Pretending Tab - Images Viewer
 A simple User Script that opens the full size image in tab like view. Offering three view states. Fitting, filling, original.
 
-### Important Note
+### Important Note (should be fixed in the future)
 This user script will break click listener on hyperlinked elements.
 
 Action | Trigger
